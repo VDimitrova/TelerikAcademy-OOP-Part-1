@@ -1,0 +1,15 @@
+namespace _01_School
+{
+    public class Discipline : ISchool
+    {
+        public Discipline(string name, int lectures, int exercises)
+        {
+            this.Name = name;
+            this.NumberOfLectures = lectures;
+            this.NumberOfExercises = exercises;
+        }
+        public string Name { get; private set; }
+        public int NumberOfLectures { get; private set; }
+        public int NumberOfExercises { get; private set; }
+    }
+}
