@@ -1,0 +1,22 @@
+namespace _01_School
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    public class Teacher : People, ISchool
+    {
+        public Teacher(string name)
+            : base(name)
+        {
+            this.Disciplines = new List<Discipline>();
+        }
+
+        public List<Discipline> Disciplines { get; private set; }
+
+        public void AddDiscipline(string name, int lectures, int exercises)
+        {
+            Discipline discipline = new Discipline(name, lectures, exercises);
+            this.Disciplines.Add(discipline);
+        }
+    }
+}
