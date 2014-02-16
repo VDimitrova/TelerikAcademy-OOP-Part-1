@@ -1,0 +1,20 @@
+namespace _01_School
+{
+    using System.Collections.Generic;
+    public class School : ISchool
+    {
+        public School(string name)
+        {
+            this.Name = name;
+        }
+        public string Name { get; private set; }
+
+        public List<Class> Classes { get; private set; }
+
+        public void AddClass(string name)
+        {
+            Class newClass = new Class(name);
+            this.Classes.Add(newClass);
+        }
+    }
+}
