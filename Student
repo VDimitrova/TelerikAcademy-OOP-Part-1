@@ -1,0 +1,12 @@
+namespace _01_School
+{
+    public class Student : People, ISchool
+    {        
+        public Student(string name, int id)
+            : base(name)
+        {
+            this.Id = id;
+        }
+        public int Id { get; private set; }
+    }
+}
