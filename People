@@ -1,0 +1,12 @@
+namespace _01_School
+{
+    public abstract class People : ISchool
+    {
+        public People(string name)
+        {
+            this.Name = name;
+        }
+        public string Name { get; private set; }
+    }
+
+}
