@@ -1,0 +1,27 @@
+namespace _01_School
+{
+    using System.Collections.Generic;
+    public class Class : ISchool
+    {
+        public Class(string name)
+        {
+            this.Name = name;
+        }
+        // Here the name is represented by Unique Text Identifier
+        public string Name { get ; private set; }
+        public List<Student> Students { get; private set; }
+        public List<Teacher> Teachers { get; private set; }
+
+        public void AddStudent(string name, int id)
+        {
+            Student student = new Student(name, id);
+            this.Students.Add(student);
+        }
+
+        public void AddTeacher(string name)
+        {
+            Teacher teacher = new Teacher(name);
+            this.Teachers.Add(teacher);
+        }
+    }
+}
